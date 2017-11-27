@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ut.vrautocycling.dagger2">
+
+    <application
+        android:name=".one.DaggerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--Dagger2 简单使用 Demo-->
+        <activity android:name=".one.MainActivity">
+        </activity>
+
+        <!--RecyclerView 嵌套 EditText 冲突解决-->
+        <activity android:name=".two.TwoActivity">
+        </activity>
+
+        <!--RecyclerView 嵌套 TagFlowLayout Demo-->
+        <activity android:name=".three.ThreeActivity">
+        </activity>
+
+        <!--LeetCode 算法-->
+        <activity android:name=".four.FourActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
