@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Dagger2</string>
+
+    <string-array name="five_text">
+        <item>1</item>
+        <item>11</item>
+        <item>12</item>
+        <item>123</item>
+        <item>321</item>
+        <item>21</item>
+        <item>00</item>
+        <item>0324</item>
+        <item>6541</item>
+        <item>5432</item>
+        <item>37806</item>
+        <item>4986</item>
+        <item>5423</item>
+        <item>6543</item>
+        <item>765</item>
+        <item>823</item>
+        <item>9424</item>
+    </string-array>
+
 </resources>

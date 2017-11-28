@@ -11,27 +11,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--Dagger2 简单使用 Demo-->
+        <!-- Dagger2 简单使用 Demo -->
         <activity android:name=".one.MainActivity">
         </activity>
 
-        <!--RecyclerView 嵌套 EditText 冲突解决-->
+        <!-- RecyclerView 嵌套 EditText 冲突解决 -->
         <activity android:name=".two.TwoActivity">
         </activity>
 
-        <!--RecyclerView 嵌套 TagFlowLayout Demo-->
+        <!-- RecyclerView 嵌套 TagFlowLayout Demo -->
         <activity android:name=".three.ThreeActivity">
         </activity>
 
-        <!--LeetCode 算法-->
+        <!-- LeetCode 算法 -->
         <activity android:name=".four.FourActivity">
+        </activity>
+        <activity android:name=".five.FiveActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
