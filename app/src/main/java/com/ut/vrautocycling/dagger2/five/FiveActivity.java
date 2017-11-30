@@ -69,7 +69,7 @@ public class FiveActivity extends AppCompatActivity {
                 }
                 if (!mReSearch) {
                     mShowText.clear();
-                    mShowText.addAll(Matcher.match(str, mCacheText));
+                    mShowText.addAll(Matcher.match(Matcher.CONTAINS, str, mCacheText));
                     mTvContent.showDropDown();
                     return;
                 }

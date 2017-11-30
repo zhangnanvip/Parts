@@ -18,7 +18,7 @@ class SimpleFilter extends Filter {
     @Override
     protected FilterResults performFiltering(CharSequence constraint) {
         FilterResults results = new FilterResults();
-        List<String> values = Matcher.match(constraint, mData);
+        List<String> values = Matcher.match(Matcher.CONTAINS,constraint, mData);
         results.values = values;
         results.count = values.size();
         return results;

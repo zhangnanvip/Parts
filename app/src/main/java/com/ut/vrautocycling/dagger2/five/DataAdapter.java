@@ -51,7 +51,7 @@ class DataAdapter extends BaseAdapter implements Filterable {
         return new SimpleFilter(this, mData);
     }
 
-    class ViewHolder {
+    static class ViewHolder {
         TextView mTvText;
 
         ViewHolder(View view) {
