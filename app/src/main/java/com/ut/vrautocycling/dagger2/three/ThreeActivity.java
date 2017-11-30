@@ -77,7 +77,7 @@ public class ThreeActivity extends AppCompatActivity {
                 mTagFlowLayout.setAdapter(new TagAdapter<Integer>(data) {
                     @Override
                     public View getView(FlowLayout parent, int position, Integer integer) {
-                        TextView textView = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.tv, mTagFlowLayout, false);
+                        TextView textView = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.item_tagflow_tv, mTagFlowLayout, false);
                         textView.setText(integer + "");
                         return textView;
                     }

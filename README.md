@@ -1,12 +1,14 @@
-# Parts
-测试Demo，随手小记。
+# Parts（随手小记）
+***内容**：*
+1. one：Dagger2 简单使用。
+2. two：RecyclerView 嵌套 EditText 冲突解决。
+3. three：RecyclerView 结合 FlowLayout 简单使用。
+4. four：LeetCode 算法编写。
+5. five：AutoCompleteTextView模拟网络模糊查询匹配
+6. six：ViewStub 简单使用
 
-one：Dagger2 简单使用。
-two：RecyclerView 嵌套 EditText 冲突解决。
-three：RecyclerView 结合 FlowLayout 简单使用。
-four：LeetCode 算法编写。
-five：AutoCompleteTextView模拟网络模糊查询匹配
+* layout_point_nine_drawable.xml：.9.png简单使用
 
-test.xml：.9.png简单使用
+***说明**：*
 
-自行在 AndroidManifest.xml 切换主界面使用。
+    自行在 AndroidManifest.xml 切换主界面使用。

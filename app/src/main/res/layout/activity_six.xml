@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context="com.ut.vrautocycling.dagger2.six.SixActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/nine"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="今天天气好"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/nine"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_one"/>
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="明天天气好"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_one"/>
+
+    <TextView
+        android:id="@+id/tv_show_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="showMore"
+        android:text="点我显示更多"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_two"/>
+
+    <ViewStub
+        android:id="@+id/vs_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout="@layout/layout_stub_view"
+        app:layout_constraintTop_toBottomOf="@+id/tv_two"/>
+
+</android.support.constraint.ConstraintLayout>

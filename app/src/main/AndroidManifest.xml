@@ -26,7 +26,13 @@
         <!-- LeetCode 算法 -->
         <activity android:name=".four.FourActivity">
         </activity>
+
+        <!--AutoCompleteTextView模拟网络模糊查询匹配-->
         <activity android:name=".five.FiveActivity">
+        </activity>
+
+        <!--ViewStub 简单使用-->
+        <activity android:name=".six.SixActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

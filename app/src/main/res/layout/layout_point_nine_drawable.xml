@@ -7,6 +7,6 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="500dp"
-        android:background="@drawable/test"/>
+        android:background="@drawable/nine"/>
 
 </android.support.constraint.ConstraintLayout>
