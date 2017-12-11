@@ -27,18 +27,23 @@
         <activity android:name=".four.FourActivity">
         </activity>
 
-        <!--AutoCompleteTextView模拟网络模糊查询匹配-->
+        <!-- AutoCompleteTextView模拟网络模糊查询匹配 -->
         <activity android:name=".five.FiveActivity">
         </activity>
 
-        <!--ViewStub 简单使用-->
+        <!-- ViewStub 简单使用 -->
         <activity android:name=".six.SixActivity">
+        </activity>
+
+        <!-- 自定义小型组件测试 -->
+        <activity android:name=".seven.SevenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
