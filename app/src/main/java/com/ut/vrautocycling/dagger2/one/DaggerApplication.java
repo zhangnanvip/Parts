@@ -9,7 +9,6 @@ import com.ut.vrautocycling.dagger2.dagger.module.AppTestModule;
 
 /**
  * @author zhangnan
- * @company YouTu
  * @date 2017/10/6
  */
 

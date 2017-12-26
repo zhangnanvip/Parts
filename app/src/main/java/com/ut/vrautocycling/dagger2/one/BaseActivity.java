@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 
 /**
  * @author zhangnan
- * @company YouTu
  * @date 2017/10/5
  */
 

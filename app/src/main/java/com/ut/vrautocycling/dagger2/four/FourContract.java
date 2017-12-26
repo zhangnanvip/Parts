@@ -4,7 +4,6 @@ import com.ut.vrautocycling.dagger2.one.IContract;
 
 /**
  * @author zhangnan
- * @company YouTu
  * @date 2017/11/24
  */
 

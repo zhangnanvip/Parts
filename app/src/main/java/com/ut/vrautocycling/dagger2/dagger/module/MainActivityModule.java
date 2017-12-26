@@ -8,7 +8,6 @@ import dagger.Provides;
 
 /**
  * @author zhangnan
- * @company YouTu
  * @date 2017/10/5
  */
 

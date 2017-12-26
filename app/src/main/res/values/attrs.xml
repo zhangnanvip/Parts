@@ -7,4 +7,8 @@
         <attr name="textSize" format="dimension"/>
         <attr name="textColor" format="color"/>
     </declare-styleable>
+    
+    <declare-styleable name="GarbageCanView">
+        <attr name="garbageNum" format="integer"/>
+    </declare-styleable>
 </resources>

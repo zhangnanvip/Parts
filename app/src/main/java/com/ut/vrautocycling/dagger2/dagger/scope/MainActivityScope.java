@@ -7,7 +7,6 @@ import javax.inject.Scope;
 
 /**
  * @author zhangnan
- * @company YouTu
  * @date 2017/10/7
  */
 

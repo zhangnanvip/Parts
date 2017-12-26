@@ -6,7 +6,7 @@
 4. four：LeetCode 算法编写。
 5. five：AutoCompleteTextView模拟网络模糊查询匹配
 6. six：ViewStub 简单使用
-7. seven：自定义小型组件测试
+7. seven：自定义小型组件测试 [DragBubbleView（仿QQ消息数量控件）,GarbageCanView（垃圾桶扔垃圾控件）]
 
 * layout_point_nine_drawable.xml：.9.png简单使用
 

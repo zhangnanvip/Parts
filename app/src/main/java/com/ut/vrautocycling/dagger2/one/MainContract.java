@@ -4,7 +4,6 @@ import com.ut.vrautocycling.dagger2.dagger.model.User;
 
 /**
  * @author zhangnan
- * @company YouTu
  * @date 2017/10/5
  */
 
