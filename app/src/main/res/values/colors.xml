@@ -6,4 +6,32 @@
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="red">#ff0000</color>
+
+    <!-- Pig SVG Color-->
+    <color name="pig1">#FFD5D9</color>
+    <color name="pig2">#FCCDD3</color>
+    <color name="pig3">#EA9AA7</color>
+    <color name="pig4">#5C3623</color>
+    <color name="pig5">#5C3623</color>
+    <color name="pig6">#5C3623</color>
+    <color name="pig7">#FFFFFF</color>
+    <color name="pig8">#FFFFFF</color>
+    <color name="pig9">#FF9CB6</color>
+    <color name="pig10">#5C3623</color>
+    <color name="pig11">#FFFFFF</color>
+    <color name="pig12">#FFFFFF</color>
+    <color name="pig13">#FF9CB6</color>
+    <color name="pig14">#422E1B</color>
+    <color name="pig15">#422E1B</color>
+    <color name="pig16">#FCC3CB</color>
+    <color name="pig17">#FFBBC8</color>
+    <color name="pig18">#FCC3CB</color>
+    <color name="pig19">#FFBBC8</color>
+
+    <!-- Sun SVG Color-->
+    <color name="sun1">#FFD878</color>
+    <color name="sun2">#FFE4A9</color>
+    <color name="sun3">#4D5152</color>
+    <color name="sun4">#4D5152</color>
+
 </resources>

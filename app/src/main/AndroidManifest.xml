@@ -44,6 +44,10 @@
             </intent-filter>
         </activity>
 
+        <!-- SVG 矢量图动画使用 -->
+        <activity android:name=".eight.EightActivity">
+        </activity>
+
     </application>
 
 </manifest>
