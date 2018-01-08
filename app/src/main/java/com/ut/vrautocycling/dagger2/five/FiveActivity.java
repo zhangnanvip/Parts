@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ut.vrautocycling.dagger2.R;
@@ -96,7 +97,7 @@ public class FiveActivity extends AppCompatActivity {
         mTvContent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(FiveActivity.this, mShowText.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(FiveActivity.this, ((TextView) view).getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
