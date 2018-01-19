@@ -1,4 +1,4 @@
-package com.ut.vrautocycling.dagger2.seven.garbagecanview;
+package com.ut.vrautocycling.dagger2.seven;
 
 import android.app.Fragment;
 import android.content.ClipData;
@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.ut.vrautocycling.dagger2.R;
+import com.ut.vrautocycling.dagger2.seven.garbagecanview.GarbageCanView;
 
 /**
  * 自定义垃圾桶 View 测试
@@ -41,10 +42,6 @@ public class FillingFragment extends Fragment
      * 垃圾桶
      */
     private GarbageCanView mGcvGc;
-    /**
-     * 垃圾数量
-     */
-    private int mGarbageNum;
 
     private OnGarbageLongClickListener mOnGarbageLongClickListener;
 
@@ -86,8 +83,6 @@ public class FillingFragment extends Fragment
         mGcvGc.setGarbageCanCleanedListener(new GarbageCanView.GarbageCanCleanedListener() {
             @Override
             public void cleaned() {
-                // 垃圾桶被清空
-                mGarbageNum = 0;
             }
         });
         mGcvGc.setOnDragListener(new View.OnDragListener() {
@@ -104,7 +99,7 @@ public class FillingFragment extends Fragment
                     case DragEvent.ACTION_DRAG_EXITED:
                         return true;
                     case DragEvent.ACTION_DROP:
-                        mGcvGc.setGarbageNum(++mGarbageNum);
+                        mGcvGc.recycle("");
                         mRootLayout.removeView(mIvGarbage);
                         mIvGarbage = null;
                         Log.d(TAG, "丢入垃圾桶");

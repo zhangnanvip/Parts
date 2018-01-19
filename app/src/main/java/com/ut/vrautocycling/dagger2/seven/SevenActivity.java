@@ -11,7 +11,6 @@ import android.view.View;
 
 import com.ut.vrautocycling.dagger2.R;
 import com.ut.vrautocycling.dagger2.seven.dragbubbleview.DragBubbleView;
-import com.ut.vrautocycling.dagger2.seven.garbagecanview.FillingFragment;
 
 /**
  * 自定义小型组件测试
@@ -59,17 +58,20 @@ public class SevenActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        dbvNum.setVisibility(View.GONE);
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         switch (item.getItemId()) {
             case R.id.option_one:
-                dbvNum.setVisibility(View.GONE);
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fl_fragment, FillingFragment.newInstance(null));
-                fragmentTransaction.commit();
+                break;
+            case R.id.option_two:
+                fragmentTransaction.replace(R.id.fl_fragment, FillingsFragment.newInstance(null));
                 break;
             default:
                 break;
         }
+        fragmentTransaction.commit();
         return super.onOptionsItemSelected(item);
     }
 }

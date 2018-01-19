@@ -8,6 +8,7 @@
 6. six：ViewStub 简单使用
 7. seven：自定义小型组件测试 [DragBubbleView（仿QQ消息数量控件）,GarbageCanView（垃圾桶扔垃圾控件）]
 ![image](https://github.com/zhangnanvip/Parts/blob/master/demogif/garbagecan.gif)
+![image](https://github.com/zhangnanvip/Parts/blob/master/demogif/garbagecans.gif)
 8. eight: SVG 矢量图动画使用  
 ![image](https://github.com/zhangnanvip/Parts/blob/master/demogif/svg_animate.gif)
 

@@ -9,18 +9,12 @@
     android:clipChildren="false"
     tools:context="com.ut.vrautocycling.dagger2.seven.FillingFragment">
 
-    <ImageView
-        android:id="@+id/iv_garbage"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_garbage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/garbage"/>
-
-    <Button
-        android:id="@+id/btn_create_garbage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="创建垃圾"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
 
     <com.ut.vrautocycling.dagger2.seven.garbagecanview.GarbageCanView
         android:id="@+id/gcv_gc"

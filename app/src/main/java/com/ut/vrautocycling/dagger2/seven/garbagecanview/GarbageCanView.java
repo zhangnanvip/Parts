@@ -6,12 +6,17 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.ut.vrautocycling.dagger2.R;
 import com.ut.vrautocycling.dagger2.seven.dragbubbleview.DragBubbleView;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * 自定义垃圾桶 View 测试
@@ -19,14 +24,23 @@ import com.ut.vrautocycling.dagger2.seven.dragbubbleview.DragBubbleView;
  * @author zhangnan
  * @date 2017/12/26
  */
-public class GarbageCanView extends FrameLayout {
+public class GarbageCanView extends FrameLayout
+        implements View.OnDragListener {
 
     private ImageView mIvGarbageCan;
     private DragBubbleView mDbvGarbageNum;
 
+    /**
+     * 回收的垃圾
+     */
+    private final LinkedList mGarbageList = new LinkedList();
+    private final ArrayList mGarbageCopyList = new ArrayList(0);
+
+    private GarbageCanRecycleListener mGarbageCanRecycleListener;
     private GarbageCanCleanedListener mGarbageCanCleanedListener;
 
     private int mGarbageNum;
+
     /**
      * 已被清空
      */
@@ -74,8 +88,8 @@ public class GarbageCanView extends FrameLayout {
 
             @Override
             public void onDismiss() {
+                clearGarbageCan();
                 if (mGarbageCanCleanedListener != null) {
-                    mCleaned = true;
                     mGarbageCanCleanedListener.cleaned();
                 }
                 Log.e("---> ", "气泡消失");
@@ -88,7 +102,7 @@ public class GarbageCanView extends FrameLayout {
      *
      * @param garbageNum 垃圾数量
      */
-    public void setGarbageNum(int garbageNum) {
+    private void setGarbageNum(int garbageNum) {
         mGarbageNum = garbageNum;
         if (mGarbageNum == 0) {
             mDbvGarbageNum.setVisibility(GONE);
@@ -102,10 +116,117 @@ public class GarbageCanView extends FrameLayout {
         }
     }
 
+    /**
+     * 获取垃圾桶中垃圾数量
+     *
+     * @return 垃圾数量
+     */
+    public int getGarbageNum() {
+        return mGarbageList.size();
+    }
+
+    /**
+     * 回收垃圾
+     *
+     * @param garbage 垃圾
+     */
+    public void recycle(Object garbage) {
+        mGarbageList.add(garbage);
+        setGarbageNum(mGarbageList.size());
+    }
+
+    /**
+     * 查看垃圾桶
+     */
+    public ArrayList checkGarbage() {
+        mGarbageCopyList.clear();
+        mGarbageCopyList.addAll(mGarbageList);
+        return mGarbageCopyList;
+    }
+
+    /**
+     * 清空垃圾桶
+     */
+    public void clearGarbageCan() {
+        mCleaned = true;
+        mGarbageList.clear();
+        setGarbageNum(mGarbageList.size());
+    }
+
+    @Override
+    public boolean onDrag(View v, DragEvent event) {
+        if (mGarbageCanRecycleListener == null) {
+            return false;
+        }
+        switch (event.getAction()) {
+            case DragEvent.ACTION_DRAG_STARTED:
+                mGarbageCanRecycleListener.readyRecycle();
+                return true;
+            case DragEvent.ACTION_DRAG_ENTERED:
+                mGarbageCanRecycleListener.startRecycle(event.getX(), event.getY());
+                return true;
+            case DragEvent.ACTION_DRAG_LOCATION:
+                mGarbageCanRecycleListener.recycling(event.getX(), event.getY());
+                return true;
+            case DragEvent.ACTION_DRAG_EXITED:
+                mGarbageCanRecycleListener.cancelRecycle();
+                return true;
+            case DragEvent.ACTION_DROP:
+                int position = Integer.parseInt(event.getClipData().getItemAt(0).getText().toString());
+                recycle(mGarbageCanRecycleListener.recycled(v, position));
+                return true;
+            case DragEvent.ACTION_DRAG_ENDED:
+                return true;
+            default:
+                break;
+        }
+        return false;
+    }
+
+    public void setGarbageCanRecycleListener(GarbageCanRecycleListener garbageCanRecycleListener) {
+        mGarbageCanRecycleListener = garbageCanRecycleListener;
+        setOnDragListener(this);
+    }
+
+    /**
+     * 垃圾回收垃圾状态监听
+     */
+    public interface GarbageCanRecycleListener<T> {
+
+        /**
+         * 某个垃圾被选中
+         */
+        void readyRecycle();
+
+        /**
+         * 进入垃圾桶范围内
+         */
+        void startRecycle(float x, float y);
+
+        /**
+         * 正在向垃圾桶拖动垃圾
+         */
+        void recycling(float x, float y);
+
+        /**
+         * 垃圾放入垃圾桶
+         */
+        T recycled(View view, int position);
+
+        /**
+         * 从垃圾桶区域拖出
+         */
+        void cancelRecycle();
+
+    }
+
     public void setGarbageCanCleanedListener(GarbageCanCleanedListener garbageCanCleanedListener) {
         mGarbageCanCleanedListener = garbageCanCleanedListener;
     }
 
+    /**
+     * 垃圾桶清空监听
+     */
     public interface GarbageCanCleanedListener {
 
         void cleaned();

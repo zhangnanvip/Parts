@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_data"
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:background="@drawable/tag_bg"
+    android:gravity="center"
+    android:text="Helloworld"
+    android:textColor="@color/red"/>
