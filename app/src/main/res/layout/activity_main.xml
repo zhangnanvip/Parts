@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ut.vrautocycling.dagger2.one.MainActivity">
+    tools:context="com.parts.zn.one.MainActivity">
 
     <TextView
         android:id="@+id/tv_to_string"

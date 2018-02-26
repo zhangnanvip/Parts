@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ut.vrautocycling.dagger2.four.FourActivity">
+    tools:context="com.parts.zn.four.FourActivity">
 
     <TextView
         android:id="@+id/tv_result"

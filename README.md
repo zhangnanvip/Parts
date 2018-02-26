@@ -11,6 +11,7 @@
 ![image](https://github.com/zhangnanvip/Parts/blob/master/demogif/garbagecans.gif)
 8. eight: SVG 矢量图动画使用  
 ![image](https://github.com/zhangnanvip/Parts/blob/master/demogif/svg_animate.gif)
+9. nine: AIDL 简单图书馆构建 
 
 * layout_point_nine_drawable.xml：.9.png简单使用
 

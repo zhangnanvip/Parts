@@ -5,4 +5,4 @@
     android:id="@+id/tfl_data"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.ut.vrautocycling.dagger2.two.TwoActivity"/>
+    tools:context="com.parts.zn.two.TwoActivity"/>

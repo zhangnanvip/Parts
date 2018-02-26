@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ut.vrautocycling.dagger2">
+          package="com.parts.zn">
 
     <application
-        android:name=".one.DaggerApplication"
+        android:name="com.parts.zn.one.DaggerApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,31 +12,31 @@
         android:theme="@style/AppTheme">
 
         <!-- Dagger2 简单使用 Demo -->
-        <activity android:name=".one.MainActivity">
+        <activity android:name="com.parts.zn.one.MainActivity">
         </activity>
 
         <!-- RecyclerView 嵌套 EditText 冲突解决 -->
-        <activity android:name=".two.TwoActivity">
+        <activity android:name="com.parts.zn.two.TwoActivity">
         </activity>
 
         <!-- RecyclerView 嵌套 TagFlowLayout Demo -->
-        <activity android:name=".three.ThreeActivity">
+        <activity android:name="com.parts.zn.three.ThreeActivity">
         </activity>
 
         <!-- LeetCode 算法 -->
-        <activity android:name=".four.FourActivity">
+        <activity android:name="com.parts.zn.four.FourActivity">
         </activity>
 
         <!-- AutoCompleteTextView模拟网络模糊查询匹配 -->
-        <activity android:name=".five.FiveActivity">
+        <activity android:name="com.parts.zn.five.FiveActivity">
         </activity>
 
         <!-- ViewStub 简单使用 -->
-        <activity android:name=".six.SixActivity">
+        <activity android:name="com.parts.zn.six.SixActivity">
         </activity>
 
         <!-- 自定义小型组件测试 -->
-        <activity android:name=".seven.SevenActivity">
+        <activity android:name="com.parts.zn.seven.SevenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -45,7 +45,11 @@
         </activity>
 
         <!-- SVG 矢量图动画使用 -->
-        <activity android:name=".eight.EightActivity">
+        <activity android:name="com.parts.zn.eight.EightActivity">
+        </activity>
+
+        <!-- AIDL 简单图书馆 Demo -->
+        <activity android:name="com.parts.zn.nine.aidltest.NineActivity">
         </activity>
 
     </application>

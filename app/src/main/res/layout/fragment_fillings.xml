@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    tools:context="com.ut.vrautocycling.dagger2.seven.FillingFragment">
+    tools:context="com.parts.zn.seven.FillingFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_garbage"
@@ -16,7 +16,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"/>
 
-    <com.ut.vrautocycling.dagger2.seven.garbagecanview.GarbageCanView
+    <com.parts.zn.seven.garbagecanview.GarbageCanView
         android:id="@+id/gcv_gc"
         android:layout_width="100dp"
         android:layout_height="100dp"

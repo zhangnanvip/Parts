@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context="com.ut.vrautocycling.dagger2.six.SixActivity">
+    tools:context="com.parts.zn.six.SixActivity">
 
     <ImageView
         android:layout_width="150dp"
