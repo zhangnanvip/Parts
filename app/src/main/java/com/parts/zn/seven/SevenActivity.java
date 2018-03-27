@@ -68,6 +68,9 @@ public class SevenActivity extends AppCompatActivity {
             case R.id.option_two:
                 fragmentTransaction.replace(R.id.fl_fragment, FillingsFragment.newInstance(null));
                 break;
+            case R.id.option_three:
+                fragmentTransaction.replace(R.id.fl_fragment, DividerFragment.newInstance(null));
+                break;
             default:
                 break;
         }

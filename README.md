@@ -6,7 +6,7 @@
 4. four：LeetCode 算法编写。
 5. five：AutoCompleteTextView模拟网络模糊查询匹配
 6. six：ViewStub 简单使用
-7. seven：自定义小型组件测试 [DragBubbleView（仿QQ消息数量控件）,GarbageCanView（垃圾桶扔垃圾控件）]
+7. seven：自定义小型组件测试 [DragBubbleView（仿QQ消息数量控件）,GarbageCanView（垃圾桶扔垃圾控件）,NumRecyclerViewDivider（仿时间轴）]
 ![image](https://github.com/zhangnanvip/Parts/blob/master/demogif/garbagecan.gif)
 ![image](https://github.com/zhangnanvip/Parts/blob/master/demogif/garbagecans.gif)
 8. eight: SVG 矢量图动画使用  

@@ -5,9 +5,15 @@
         android:id="@+id/option_one"
         android:orderInCategory="100"
         android:title="垃圾桶"/>
+
     <item
         android:id="@+id/option_two"
         android:orderInCategory="100"
         android:title="垃圾箱"/>
+
+    <item
+        android:id="@+id/option_three"
+        android:orderInCategory="100"
+        android:title="分割线"/>
 
 </menu>
