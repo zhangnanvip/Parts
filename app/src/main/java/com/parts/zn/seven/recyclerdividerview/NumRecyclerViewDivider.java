@@ -84,8 +84,9 @@ public class NumRecyclerViewDivider extends RecyclerView.ItemDecoration {
             mPaint.setColor(Color.RED);
             c.drawCircle(view.getLeft() + width + width / 2, view.getTop() - mDividerWidth / 2, width, mPaint);
             mPaint.setColor(Color.WHITE);
-            float textLength = mPaint.measureText(itemPosition);
-            c.drawText(itemPosition, view.getLeft() + width + width / 2 - textLength / 2, view.getTop() - mDividerWidth / 2 + textLength / 2, mPaint);
+            Rect textBounds = new Rect();
+            mPaint.getTextBounds(itemPosition, 0, itemPosition.length(), textBounds);
+            c.drawText(itemPosition, view.getLeft() + width + width / 2 - textBounds.width() / 2, view.getTop() - mDividerWidth / 2 + textBounds.height() / 2, mPaint);
         }
         c.restore();
     }
